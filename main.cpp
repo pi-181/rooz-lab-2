@@ -292,6 +292,10 @@ int main() {
     namedWindow("Image Sharpen Gray", WINDOW_AUTOSIZE);
     imshow("Image Sharpen Gray", result);
 
+    sharpenKernel(imageGray, result);
+    namedWindow("Image Sharpen Kernel Gray", WINDOW_AUTOSIZE);
+    imshow("Image Sharpen Kernel Gray", result);
+
     // 10. Поєднайте два зображення за допомогою арифметичного оператора
     const Mat &patternImage = imread(patternPath);
     addImage(image, patternImage, result);
